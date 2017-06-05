@@ -1,0 +1,81 @@
+            step([
+                  $class: 'ViolationsPublisher',
+                  canComputeNew: false,
+                  canResolveRelativePaths: false,
+                  canRunOnFailed: false,
+                  defaultEncoding: "",
+                  failedNewAll: "",
+                  failedNewHigh: "",
+                  failedNewLow: "",
+                  failedNewNormal: "",
+                  failedTotalAll: "",
+                  failedTotalHigh: "",
+                  failedTotalLow: "",
+                  failedTotalNormal: "",
+                  healthy: "",
+                  shouldDetectModules: false,
+                  thresholdLimit: "",
+                  unHealthy: "",
+                  unstableNewAll: "",
+                  unstableNewHigh: "",
+                  unstableNewLow: "",
+                  unstableNewNormal: "",
+                  unstableTotalAll: "",
+                  unstableTotalHigh: "",
+                  unstableTotalLow: "",
+                  unstableTotalNormal: "",
+                  useDeltaValues: false,
+                  usePreviousBuildAsReference: false,
+                  useStableBuildAsReference: false,
+                  violationConfigs: [
+                     [pattern: '', reporter: 'ANDROIDLINT'], 
+                     [pattern: 'build/logs/checkstyle.xml', reporter: 'CHECKSTYLE'], 
+                     [pattern: '', reporter: 'CODENARC'], 
+                     [pattern: '', reporter: 'CLANG'], 
+                     [pattern: 'build/logs/pmd-cpd.xml', reporter: 'CPD'], 
+                     [pattern: '', reporter: 'CPPCHECK'], 
+                     [pattern: '', reporter: 'CPPLINT'], 
+                     [pattern: '', reporter: 'CSSLINT'], 
+                     [pattern: '', reporter: 'FINDBUGS'], 
+                     [pattern: '', reporter: 'FLAKE8'], 
+                     [pattern: '', reporter: 'FXCOP'], 
+                     [pattern: '', reporter: 'GENDARME'], 
+                     [pattern: '', reporter: 'JCREPORT'], 
+                     [pattern: '', reporter: 'JSHINT'], 
+                     [pattern: '', reporter: 'LINT'], 
+                     [pattern: '', reporter: 'KLOCWORK'], 
+                     [pattern: '', reporter: 'MYPY'], 
+                     [pattern: '', reporter: 'GOLINT'], 
+                     [pattern: '', reporter: 'PERLCRITIC'], 
+                     [pattern: '', reporter: 'PITEST'], 
+                     [pattern: 'build/logs/pmd.xml', reporter: 'PMD'], 
+                     [pattern: '', reporter: 'PYDOCSTYLE'], 
+                     [pattern: '', reporter: 'PYLINT'], 
+                     [pattern: '', reporter: 'RESHARPER'], 
+                     [pattern: '', reporter: 'SBTSCALAC'], 
+                     [pattern: '', reporter: 'SIMIAN'], 
+                     [pattern: '', reporter: 'STYLECOP'], 
+                     [pattern: '', reporter: 'XMLLINT'], 
+                     [pattern: '', reporter: 'ZPTLINT']
+                     ]
+                 ])
+
+                 step([$class: 'hudson.plugins.jdepend.JDependRecorder', configuredJDependFile: 'build/logs/jdepend.xml']) 
+                 step([$class: 'hudson.plugins.crap4j.Crap4JPublisher', reportPattern: 'build/logs/crap4j.xml'])
+                 step([$class: 'PlotPublisher', file: 'build/logs/phploc.csv'])
+                
+                 step([$class: 'WarningsPublisher', canComputeNew: false, canResolveRelativePaths: false, consoleParsers: [[parserName: 'PHP Runtime']], defaultEncoding: '', excludePattern: '', healthy: '', includePattern: '', messagesPattern: '', unHealthy: '' ])
+               
+
+                 ws("/var/lib/jenkins/jobs/${env.JOB_NAME}/workspace/${env.BUILD_NUMBER}") {
+
+                 }
+
+                 ws("/var/lib/jenkins/jobs/${env.JOB_NAME}/ws/${env.BUILD_NUMBER}") {
+
+                 }
+
+
+              
+
+

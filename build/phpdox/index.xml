@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index xmlns="http://xml.phpdox.net/src" basedir="C:/xampp/htdocs/jenkins/test/src">
+  <namespace name="Math">
+    <class name="Calculator" src="Math/Calculator.php" xml="classes/Math_Calculator.xml"/>
+  </namespace>
+</index>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Math\Calculator" namespace="Math" name="Calculator" abstract="false" final="false" start="4" end="53">
+  <file path="../src/Math" file="Calculator.php" realpath="C:/xampp/htdocs/jenkins/test/src/Math/Calculator.php" size="1413" time="2017-05-17T05:53:57+02:00" unixtime="1494993237" sha1="5878776c407a741e7fe49e60046fd72b183e2444" relative="Math/Calculator.php"/>
+  <method name="add" start="12" end="15" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="This method adds two numbers and returns the result"/>
+      <param type="object" variable="$number1">
+        <type full="Math\number" namespace="Math" name="number"/>
+      </param>
+      <param type="object" variable="$number2">
+        <type full="Math\number" namespace="Math" name="number"/>
+      </param>
+      <returns value="The result of adding the two numbers"/>
+    </docblock>
+    <parameter name="number1" byreference="false" type="{unknown}"/>
+    <parameter name="number2" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="substract" start="23" end="26" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="This method substracts a number from another and returns the result"/>
+      <param type="object" variable="$number1">
+        <type full="Math\number" namespace="Math" name="number"/>
+      </param>
+      <param type="object" variable="$number2">
+        <type full="Math\number" namespace="Math" name="number"/>
+      </param>
+      <returns value="The result of substracting $number2 from $number1"/>
+    </docblock>
+    <parameter name="number1" byreference="false" type="{unknown}"/>
+    <parameter name="number2" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="multiply" start="34" end="37" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="This method multiplies two numbers and returns the result"/>
+      <param type="object" variable="$number1">
+        <type full="Math\number" namespace="Math" name="number"/>
+      </param>
+      <param type="object" variable="$number2">
+        <type full="Math\number" namespace="Math" name="number"/>
+      </param>
+      <returns value="The result of multiplying two numbers"/>
+    </docblock>
+    <parameter name="number1" byreference="false" type="{unknown}"/>
+    <parameter name="number2" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="divide" start="45" end="52" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="This method divides one number by another and returns the result"/>
+      <param type="object" variable="$number1">
+        <type full="Math\number" namespace="Math" name="number"/>
+      </param>
+      <param type="object" variable="$number2">
+        <type full="Math\number" namespace="Math" name="number"/>
+      </param>
+      <returns value="The result of dividing $number2 by $number1"/>
+    </docblock>
+    <parameter name="number1" byreference="false" type="{unknown}"/>
+    <parameter name="number2" byreference="false" type="{unknown}"/>
+  </method>
+</class>

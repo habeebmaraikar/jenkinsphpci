@@ -1,2 +1,1 @@
-# jenkinsphpci
-Jenkins for php based projects
+jenkins for php
